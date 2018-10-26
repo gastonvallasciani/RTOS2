@@ -1,0 +1,27 @@
+Estimados, como les comenté a los cursantes a distancia, escribí un 
+script en python para probar los TPs 1 y 2.
+
+Es algo muy sencillo que abre un archivo de texto y lo tira línea a 
+línea por el puerto serie con el header descripto en la práctica.
+
+Está en el drive de la materia, se llama "enviar_texto.py".
+
+Para correrlo necesitan instalar python3 en sus compus. En linux 
+seguramente esté instalado o en los repositorios de su distribución, en 
+windows lo bajan de https://www.python.org/downloads/windows/. Busquen 
+la versión más nueva que sea 3.x (hoy es 3.7.0).
+
+Luego instalen un paquete llamado "pyserial" para poder usar el puerto 
+serie. Lo hacen escribiendo "pip3 install pyserial".
+
+Luego lo corren con:
+
+$python3 enviar_texto.py <nombrearchivo> <puerto> [0|1|5]
+
+Ejemplo en mi compu es: python3 enviar_texto.py Enunciado.txt /dev/ttyUSB1 0
+
+El último número es la operación, que puede ser 0, 1 o 5 por ahora.
+
+Espero que les sirva y les ahorre un poco de tiempo.
+
+Cualquier cosa nos consultan!
