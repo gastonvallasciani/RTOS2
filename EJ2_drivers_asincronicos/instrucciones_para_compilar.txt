@@ -1,0 +1,16 @@
+Pasos a seguir para compilarlo correctamente:
+
+1) Ir a sapi_uart.c y deshabilitar UART2_IRQHandler, colocando el #if 0 y #endif (linea 658):
+
+#if 0
+// UART2 (USB-UART) or UART_ENET
+// 0x2a 0x000000A8 - Handler for ISR UART2 (IRQ 26)
+void UART2_IRQHandler(void)
+{
+   uartProcessIRQ( UART_USB );
+}
+#endif
+
+2) Comentar la declaración de la anterior función en sapi_uart.h (linea 164):
+
+//void UART2_IRQHandler(void);
